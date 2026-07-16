@@ -11,7 +11,6 @@ import {
   SparklesIcon,
 } from "@hugeicons/core-free-icons";
 
-import { Avatar } from "@/components/ui/avatar";
 import { EllieMark } from "@/components/ellie-mark";
 import {
   DropdownMenu,
@@ -42,9 +41,9 @@ export function NavUser() {
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
-              <Avatar className="size-8 rounded-lg ring-1 ring-border/60">
-                <EllieMark className="size-full" title={currentUser.name} />
-              </Avatar>
+              <div className="flex size-8 shrink-0 items-center justify-center overflow-hidden rounded-lg ring-1 ring-border/60">
+                <EllieMark className="size-8!" title={currentUser.name} />
+              </div>
               <div className="grid flex-1 text-start text-sm leading-tight">
                 <span className="truncate font-medium">{currentUser.name}</span>
                 <span className="truncate text-xs text-muted-foreground">
@@ -66,9 +65,9 @@ export function NavUser() {
           >
             <DropdownMenuLabel className="p-0 font-normal">
               <div className="flex items-center gap-2 px-1 py-1.5 text-start text-sm">
-                <Avatar className="size-8 rounded-lg">
-                  <EllieMark className="size-full" title={currentUser.name} />
-                </Avatar>
+                <div className="flex size-8 shrink-0 items-center justify-center overflow-hidden rounded-lg ring-1 ring-border/60">
+                  <EllieMark className="size-8!" title={currentUser.name} />
+                </div>
                 <div className="grid flex-1 text-start text-sm leading-tight">
                   <span className="truncate font-medium">
                     {currentUser.name}
